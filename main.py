@@ -45,6 +45,11 @@ else:
 
 
 print("-" * 30)
-print("Discount applied: ", subtotal > 5000)
-print("Paid more than 3000: ", total > 3000)
+print("Name uppercase: ", customer.upper())
+print("Name lowercase: ", customer.lower())
+print("Name length: ", len(customer))
+if len(customer) > 5:
+    print("Long name")
+else:
+    print("Short name")
 print("=" * 30)
