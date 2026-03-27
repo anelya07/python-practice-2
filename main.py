@@ -1,10 +1,21 @@
+
 #TASK 1 - A
 
 # a)
 customer = input("Enter customer name: ")
-product = input("Enter product name: ")
-price = float(input("Enter price per unit (KZT): "))
-quantity = int(input("Enter quantity: "))
+check = True
+count = 0
+subtotal = 0
+
+while check == True:
+    product = input("Enter product name: ")
+    if product == "done":
+        check = False
+    else:
+        price = float(input("Enter price per unit (KZT): "))
+        count = count + 1
+        subtotal += price
+
 
 # (b) and (c)
 
@@ -12,13 +23,11 @@ print("=" * 30)
 print("         SHOP RECEIPT")
 print("=" * 30)
 
-print(f"Customer: {customer}")
-print(f"Product: {product}")
+print(f"Customer: {customer.upper()}")
+print(f"Items: {count}")
 print(f"Price: {price}" + " KZT")
-print(f"Quantity: {quantity}")
 
 print("-" * 30)
-subtotal = price * quantity
 
 if subtotal > 5000:
     print(f"Subtotal: {subtotal}" + " KZT")
